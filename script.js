@@ -1,6 +1,13 @@
 let popmessage2 =document.getElementById("popmessage");
 let inputText = document.getElementById("inputText");
 let todolist = document.getElementById("todolist");
+let loader = document.querySelector(".loader");
+window.addEventListener("load", () => {
+    loader.classList.add("loader-hidden");
+    loader.addEventListener("transitionend", () =>{
+      document.body.removeChild(loader);
+    });
+});
 
 let tasks = [];
 function showToast(){

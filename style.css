@@ -4,6 +4,40 @@
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
 }
+.loader{
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      transition: opacity 0.95s, visibility 0.95s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+}
+.loader::after{
+      content: "";
+      height: 60px;
+      width: 60px;
+      border: 15px solid #fff;
+      border-top-color:yellow ;
+      border-radius: 50%;
+      animation: rotate 0.75s ease-in-out infinite;
+}
+.loader-hidden{
+      opacity: 0;
+      visibility: hidden;
+}
+@keyframes rotate {
+      0%{
+            transform: rotate(0turn);
+      }
+      100%{
+            transform: rotate(1turn);
+      }
+}
 .contanier{
       min-height: 400px;
       display: flex;
